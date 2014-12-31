@@ -40,44 +40,51 @@
         </p>
 
         <p>
-            Basically, it reads your version control history (git, svn) and produces .csv file.
-            Then reads .csv file and produces standalone .html file with visualizations.
+            It works in two steps:
+            <ul>
+                <li>reads version control history (git, svn) into .csv file;</li>
+                <li>reads .csv file and produces standalone .html file with visualizations.</li>
+            </ul>
         </p>
 
         <h3>How to use?</h3>
 
         <p>
-            Make sure you have <a href="https://java.com/en/download/index.jsp">Java</a> installed (1.6 or above).
-            <br/>
-            Use this button to download zip file:
-            <a href="https://github.com/dkandalov/code-history-mining-cli/raw/master/code-mining-cli.zip" class="btn">Download as .zip</a>.
-            <br/>
-            Unzip it and run code-mining.sh (or .bat), e.g. to visualize two years of JUnit history:
-        </p>
-<pre><code>$ git clone https://github.com/junit-team/junit
+            <ol>
+                <li>Make sure you have <a href="https://java.com/en/download/index.jsp">Java</a> installed (1.6 or above).</li>
+                <li>
+                    <a href="https://github.com/dkandalov/code-history-mining-cli/raw/master/code-mining-cli.zip" class="btn">Download</a>
+                    code-history-mining zip.
+                </li>
+                <li>
+                    Unzip it and run code-mining.sh (or .bat), e.g. to visualize two years of JUnit history:
+                    <pre><code>$ git clone https://github.com/junit-team/junit
 $ cd junit
 $ ../code-mining.sh grab --from 01/01/2012 --to 01/01/2014
-$ ../code-mining.sh visualize --csv junit.csv
-</code></pre>
-        <p>
-            To see help, run script without any parameters. It should be self-explanatory.
-            If not, please feel free to <a href="https://github.com/dkandalov/code-history-mining-cli/issues">send a question</a>.
+$ ../code-mining.sh visualize --csv junit.csv</code></pre>
+                </li>
+                <li>
+                    To see help, run script without any parameters. It should be self-explanatory.
+                    If not, please feel free to <a href="https://github.com/dkandalov/code-history-mining-cli/issues">send a question</a>.
+                </li>
+            </ol>
         </p>
 
-        <h3>Why all this?</h3>
+        <h3>Why?</h3>
         <p>
-            Governments and Facebook spy on us, so it would be nice to spy on someone else too.
-            For example, yourself and your own project. But seriously there is a lot of interesting data
-            in code history and we mostly look at it as a list of commits.
-            This is an attempt to change perspective on what code history could look like.
+            There seems to be a lot of interesting data captured in version control systems, yet we don't use it that much.
+            This is an attempt to make looking at project history easier.
+            <ul>
+                <li>converting history to csv is useful because it's easy to read and process in any language (or even in a spreadsheet);</li>
+                <li>interactive visualization is cool because it's fun to play with and can hopefully give deeper insight into project history.</li>
+            </ul>
         </p>
 
         <h3>Credits</h3>
         <p>
             Inspired by Michael Feathers <a href="https://github.com/michaelfeathers/delta-flora">Delta Flora</a> project.
             All visualizations are based on <a href="https://github.com/mbostock/d3/wiki/Gallery">d3.js</a>.
-            See also <a href="https://github.com/dkandalov/code-history-mining">IntelliJ plugin</a> (same functionality).
-            Thank you.
+            See also <a href="https://github.com/dkandalov/code-history-mining">IntelliJ plugin</a>.
         </p>
 
     </section>
