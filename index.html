@@ -53,8 +53,8 @@
             <ol>
                 <li>Make sure you have <a href="https://java.com/en/download/index.jsp">Java</a> installed (1.6 or above).</li>
                 <li>
-                    <a href="https://github.com/dkandalov/code-history-mining-cli/raw/master/code-mining-cli.zip" class="btn"
-                       onclick="var that=this;_gaq.push(['_trackEvent','Download','cli.zip',this.href]);setTimeout(function(){location.href=that.href;},200);return false;">
+                    <a href="https://github.com/dkandalov/code-history-mining-cli/raw/master/code-mining-cli.zipa" class="btn"
+                       onclick="var that=this;_gaq.push(['_trackEvent','Download','ZIP',this.href]);setTimeout(function(){location.href=that.href;},200);return false;">
                         Download
                     </a>
                     code-history-mining zip.
@@ -94,15 +94,15 @@ $ ../code-mining.sh visualize --csv junit.csv</code></pre>
 </div>
 
 <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-    try {
-        var pageTracker = _gat._getTracker("UA-56523002-1");
-        pageTracker._trackPageview();
-    } catch (err) {
-    }
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-56523002-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 </script>
 
 </body>
