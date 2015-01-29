@@ -72,6 +72,13 @@ header h2 {
   display: inline-block;
   text-align: center;
   margin: 0;
+
+  background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+  padding: 8px 18px;
+  border-radius: 50px;
+  border: 2px solid rgba(187, 187, 187, 0.70);
+  border-bottom: 2px solid rgba(187, 187, 187, 0.70);
+  border-top: 2px solid rgba(187, 187, 187, 0.70);
 }
 
 /* Main Content
