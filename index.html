@@ -28,69 +28,80 @@
 </header>
 
 <div class="container">
-    <section id="main_content">
-        <h3>What is this?</h3>
-
+    <div id="main_content">
         <p>
-            This is a command line application to analyze and visualize project code history.
-            For example, see visualizations for
+            This is a command line application to visualize project code history.
+            See examples of all visualizations for:
             <a href="http://dkandalov.github.io/code-history-mining/JUnit.html">JUnit</a>,
             <a href="http://dkandalov.github.io/code-history-mining/NodeJS.html">NodeJS</a>,
             <a href="http://dkandalov.github.io/code-history-mining/Rails.html">Ruby on Rails</a>.
+            If you use one of IntelliJ IDEs, see also <a href="https://plugins.jetbrains.com/plugin/7273">IntelliJ plugin</a>.
         </p>
-
-        <p>
-            It works in two steps:
-            <ul>
-                <li>reads version control history (git, svn) into .csv file;</li>
-                <li>reads .csv file and produces standalone .html file with visualizations.</li>
-            </ul>
-        </p>
-
-        <h3>How to use?</h3>
-
-        <p>
-            <ol>
-                <li>Make sure you have <a href="https://java.com/en/download/index.jsp">Java</a> installed (1.6 or above).</li>
-                <li id="downloads">
-                    <a href="https://github.com/dkandalov/code-history-mining-cli/raw/master/code-mining-cli.zip"  class="btn"
-                       onclick="var that=this;_gaq.push(['_trackEvent','Download','ZIP',this.href]);setTimeout(function(){location.href=that.href;},200);return false;">
-                        Download
-                    </a>
-                    code-history-mining zip.
-                </li>
-                <li>
-                    Unzip it and run code-mining.sh (or .bat), e.g. to visualize two years of JUnit history:
-                    <pre><code>$ git clone https://github.com/junit-team/junit
-$ cd junit
-$ ../code-mining.sh grab --from 01/01/2012 --to 01/01/2014
-$ ../code-mining.sh visualize --csv junit.csv</code></pre>
-                </li>
-                <li>
-                    To see help, run script without any parameters. It should be self-explanatory.
-                    If not, please feel free to <a href="https://github.com/dkandalov/code-history-mining-cli/issues">send a question</a>.
-                </li>
-            </ol>
-        </p>
+        <br/>
 
         <h3>Why?</h3>
         <p>
             There seems to be a lot of interesting data captured in version control systems, yet we don't use it that much.
             This is an attempt to make looking at project history easier.
-            <ul>
-                <li>converting history to csv is useful because it's easy to read and process in any language (or even in a spreadsheet);</li>
-                <li>interactive visualization is cool because it's fun to play with and can hopefully give deeper insight into project history.</li>
-            </ul>
+        <ul>
+            <li>find out what happened on project</li>
+            <li>find trends in code changes</li>
+            <li>look for code-change/behavioral patterns</li>
+        </ul>
+        See also <a href="https://pragprog.com/book/atcrime/your-code-as-a-crime-scene">Your Code as a Crime Scene</a> book.
         </p>
+        <br/>
+
+        <h3>How to install?</h3>
+        <p>
+            <ol start="0">
+                <li>Install <a href="https://java.com/en/download/index.jsp">Java</a> 1.6 or above.</li>
+                <li id="downloads">
+                    <a href="https://github.com/dkandalov/code-history-mining-cli/raw/master/code-mining-cli.zip"  class="btn"
+                       onclick="var that=this;_gaq.push(['_trackEvent','Download','ZIP',this.href]);setTimeout(function(){location.href=that.href;},200);return false;">
+                        Download
+                    </a> and unpack code-history-mining zip.
+                </li>
+            </ol>
+        </p>
+        <br/>
+
+        <h3>How to use?</h3>
+        <p>
+            <ol start="0">
+                <li>Grab code history from VCS into csv file.</li>
+                <li>(Optional) Filter csv file, e.g. to exclude folders/files not relevant for analysis.</li>
+                <li>Generate visualizations from csv file.</li>
+            </ol>
+        </p>
+        <p>
+            For example, to grab and visualize two years of JUnit history:
+                    <pre><code>$ git clone https://github.com/junit-team/junit
+$ cd junit
+$ code-mining.sh grab --from 01/01/2012 --to 01/01/2014
+$ code-mining.sh visualize --csv junit.csv</code></pre>
+        </p>
+        <p>To see all commands and options, run script without any parameters. It should be self-explanatory.</p>
+        <p>
+            If something doesn't work or make sense, please feel free to
+            <a href="https://github.com/dkandalov/code-history-mining-cli/issues">create an issue on GitHub</a>.
+        </p>
+        <p></p>
+        <br/>
+
+        <h3>Requirements</h3>
+        <p>
+            Any OS with Java. Supported VCS: Git, Svn. Browser with SVG support.
+        </p>
+        <br/>
 
         <h3>Credits</h3>
         <p>
             Inspired by Michael Feathers <a href="https://github.com/michaelfeathers/delta-flora">Delta Flora</a> project.
             All visualizations are based on <a href="https://github.com/mbostock/d3/wiki/Gallery">d3.js</a>.
-            See also <a href="https://github.com/dkandalov/code-history-mining">IntelliJ plugin</a>.
         </p>
 
-    </section>
+    </div>
 </div>
 
 <script type="text/javascript">
