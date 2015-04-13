@@ -35,7 +35,6 @@
             <a href="http://dkandalov.github.io/code-history-mining/JUnit.html">JUnit</a>,
             <a href="http://dkandalov.github.io/code-history-mining/NodeJS.html">NodeJS</a>,
             <a href="http://dkandalov.github.io/code-history-mining/Rails.html">Ruby on Rails</a>.
-            If you use one of IntelliJ IDEs, see also <a href="https://plugins.jetbrains.com/plugin/7273">IntelliJ plugin</a>.
         </p>
         <br/>
 
@@ -55,7 +54,9 @@
         <h3>How to install?</h3>
         <p>
             <ol start="0">
-                <li>Install <a href="https://java.com/en/download/index.jsp">Java</a> 1.6 or above.</li>
+                <li>
+                    Check that <a href="https://java.com/en/download/index.jsp">Java</a> (>=1.6) and svn/git are available on PATH.
+                </li>
                 <li id="downloads">
                     <a href="https://github.com/dkandalov/code-history-mining-cli/raw/master/code-mining-cli.zip"  class="btn"
                        onclick="var that=this;_gaq.push(['_trackEvent','Download','ZIP',this.href]);setTimeout(function(){location.href=that.href;},200);return false;">
@@ -91,7 +92,11 @@ $ code-mining.sh visualize --csv junit.csv</code></pre>
 
         <h3>Requirements</h3>
         <p>
-            Any OS with Java. Supported VCS: Git, Svn. Browser with SVG support.
+            Any OS with Java.
+            <br/>
+            VCS: Git, Svn.
+            <br/>
+            Browser with SVG support.
         </p>
         <br/>
 
@@ -99,10 +104,23 @@ $ code-mining.sh visualize --csv junit.csv</code></pre>
         <p>
             Inspired by Michael Feathers <a href="https://github.com/michaelfeathers/delta-flora">Delta Flora</a> project.
             All visualizations are based on <a href="https://github.com/mbostock/d3/wiki/Gallery">d3.js</a>.
+            <br/><br/>
+            If you use one of IntelliJ IDEs, see also <a href="https://plugins.jetbrains.com/plugin/7273">IntelliJ plugin</a>.
+            <br/><br/>
         </p>
 
     </div>
 </div>
+
+<footer>
+    <div class="container" id="main_content">
+        <h4>
+            Github: <a href="https://github.com/dkandalov/code-history-mining-cli/issues/new">submit issue</a>
+            &nbsp;|&nbsp;
+            Twitter: <a href="https://twitter.com/dmitrykandalov">@dmitrykandalov</a>
+        </h4>
+    </div>
+</footer>
 
 <script type="text/javascript">
     var _gaq = _gaq || [];
